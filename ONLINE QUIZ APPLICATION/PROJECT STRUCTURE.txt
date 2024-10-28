@@ -1,0 +1,10 @@
+Online-Quiz-Application/
+├── src/
+│   ├── Main.java                # Entry point for the application
+│   ├── Quiz.java                # Quiz class that manages the quiz flow
+│   └── Question.java            # Question class that represents individual questions
+├── resources/
+│   └── questions.txt            # Optional: Text file for storing questions if loading dynamically
+├── README.md                    # Project overview and instructions
+├── LICENSE                      # License file (optional, if applicable)
+└── .gitignore                   # List of files/folders to ignore in Git (e.g., IDE config files)
