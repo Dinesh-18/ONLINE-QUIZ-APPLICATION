@@ -1,29 +1,14 @@
-import java.util.List;
+import java.util.Arrays;
 
-public class Question {
-    private String questionText;
-    private List<String> options;
-    private int correctAnswerIndex;
+public class Main {
+    public static void main(String[] args) {
+        Quiz quiz = new Quiz();
 
-    public Question(String questionText, List<String> options, int correctAnswerIndex) {
-        this.questionText = questionText;
-        this.options = options;
-        this.correctAnswerIndex = correctAnswerIndex;
-    }
+        // Sample questions
+        quiz.addQuestion(new Question("What is the capital of France?", Arrays.asList("Berlin", "London", "Paris", "Madrid"), 2));
+        quiz.addQuestion(new Question("Which language is used primarily for Android development?", Arrays.asList("Python", "Java", "Swift", "Kotlin"), 1));
+        quiz.addQuestion(new Question("What is the largest planet in our Solar System?", Arrays.asList("Earth", "Jupiter", "Mars", "Venus"), 1));
 
-    public String getQuestionText() {
-        return questionText;
-    }
-
-    public List<String> getOptions() {
-        return options;
-    }
-
-    public int getCorrectAnswerIndex() {
-        return correctAnswerIndex;
-    }
-
-    public boolean isCorrect(int userAnswer) {
-        return userAnswer == correctAnswerIndex;
+        quiz.start();
     }
 }
